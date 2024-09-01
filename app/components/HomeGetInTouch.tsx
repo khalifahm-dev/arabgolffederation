@@ -1,0 +1,31 @@
+
+import '@/app/components/welcome.css';
+import { Col, Row } from 'antd';
+import { getMessages } from "next-intl/server";
+
+export default async function HomeGetInTouch( {locale}:{locale:string}) {
+        const t: any = (await getMessages({ locale })).GetInTouch;
+
+
+        return (
+
+                <div className='absolute getInTouchContainter'>
+                        <div className='getInTouchSubContainter'>
+                                <Row className='' gutter={[36, 0]}>
+
+                                        <Col className='relative' xs={24} sm={24} md={24} lg={20} xl={20} >
+                                                <h2>{t.Title}</h2>
+                                                <p className='aboutDesc'>
+                                                {t.SubTitle}
+                                                </p>
+
+                                        </Col>
+                                        <Col className='flex justify-center items-center' xs={24} sm={24} md={24} lg={4} xl={4}>
+                                                <div><a className='button' href="">{t.Button}</a></div>
+                                        </Col>
+                                </Row>
+                        </div>
+                </div >
+        );
+
+}

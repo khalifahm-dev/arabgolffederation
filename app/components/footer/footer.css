@@ -1,0 +1,61 @@
+.logoFooter{
+    width:80px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.grid-item {
+    flex-grow: 20%;
+    flex-basis: 20%;
+    position: relative;
+}
+
+
+
+
+.just-cont-bet {
+    justify-content: space-between;
+
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.light-grey-bg{
+    background-color: #f6f6f8;
+}
+
+.pd-v-75{
+    padding: 75px 0;
+}
+
+.footer-icon{
+    width: 16px;
+}
+
+
+svg{
+    display: inline;
+}
+
+.sm-icon{
+    width: 16px;
+    fill: #878787;
+    margin-right:20px ;
+
+}
+
+
+li{
+    color: #878787;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+
+.footerHeader{
+   font-size: 16px;
+  font-weight: 500;
+   color: #222222;
+}

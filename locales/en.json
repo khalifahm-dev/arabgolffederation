@@ -1,0 +1,67 @@
+{
+  "Header":{
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "news": "News",
+    "boardOfDirectors": "Board of Directors",
+    "tournaments": "Tournaments",
+    
+    "partnership": "In partnership with"
+  },
+
+  
+  "WelcomeHomePage":{
+    "Title": "Arab Golf Federation",
+    "SubTitle": "Welcome",
+    "Desc": "The Arab Golf Federation was founded in 1974 during Al Nile and Arz Golf Championships. The organisation represents the collective interests of 19 member nations, whose mission, which is recognised by The R&A and Arab Olympic Committee, is to streamline governance of the game in the Arab world and enhance the overall development of golf by creating more and better playing opportunities for its members."
+    
+  },
+
+  "AboutHomePage":{
+    "Title": "Arab Golf Federation",
+    "SubTitle": "The development of golf",
+    "Desc": "The mission of the Arab Golf Federation is to streamline the affairs of the game in the Arab world and enhance the overall development of golf by creating healthy playing opportunities for its members. Recognised by the R&A - the game's governing body based at St Andrews -- and the Arab Olympic Committee.",
+    "Button": "Read More"
+  },
+ 
+  "HowHelpHomePage":{
+    "Title": "How the AGF can help",
+    "SubTitle": "Driving Mass Participation",
+    "Desc": "The Arab Golf Federation recognises the true value that this great game can deliver, across all Arab societies. The Federation is fully committed to focusing on how it can support the game’s governing bodies, in their mission to develop the game around the world, as well as mobilising our collective resources to maximise opportunities for Arab nations with the primary aim of boosting participation.",
+    "Button": "About Us",
+    "HowHelpList":[{
+      "title":"Achieve",
+      "desc":"Providing new exciting opportunities for male and female golfers"
+    },{
+      "title":"Synergy",
+      "desc":"Collaborating with all Arab nations to create the best pathways"
+    },{
+      "title":"Eco",
+      "desc":"Benchmarking and generating best practice"
+    },{
+      "title":"Care",
+      "desc":"Supporting the growth of our golfers and employees"
+    }]
+  },
+
+  "GetInTouch":{
+    "Title": "Get in touch",
+    "SubTitle": "If you would like to discuss how you can work together and support the Arab Golf Federation’s ongoing mission, please fill out the form below or email us.",
+    "Button": "Contact"
+  },
+  
+  "Footer":{
+    "Title":"The Overall Development Of Golf.",
+    "Desc":"The Mission Of The Arab Golf Federation (AFG) Is To Streamline The Affairs Of The Game In The Arab World And Enhance The Overall Development Of Golf.",
+    "About":"About US",
+    "Other":"Other",
+    "Contact":"Contact Us",
+    
+    "about2": "About",
+    "boardOfDirectors2": "Board of Directors",
+
+    "Copyrights":"© 2024 The Arab Golf Federation"
+  }
+
+}
