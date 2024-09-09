@@ -2,6 +2,7 @@ import '@/app/components/welcome.css';
 import { Col, Row } from 'antd';
 import { getMessages } from "next-intl/server";
 import imgMain from '@/public/homeabout.webp'
+import Image from 'next/image'
 
 
 export default async function HomeAbout({locale}:{locale:string}) {
@@ -13,7 +14,7 @@ export default async function HomeAbout({locale}:{locale:string}) {
                                         <div className='h-220'></div>
                                         <Row className='pd-v-32 z-10' gutter={[48, 32]}>
                                                 <Col xs={24} sm={24} md={24} lg={11} xl={13}  >
-                                                        <img   src={imgMain.src} alt="" />
+                                                        <Image src={imgMain.src} width={750} height={500} quality={80} alt="main photo" />
                                                 </Col>
                                                 <Col className='relative' xs={24} sm={24} md={24} lg={11} xl={11} >
                                                         <h2>{t.Title}</h2>

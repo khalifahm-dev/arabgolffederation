@@ -2,7 +2,12 @@
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
-const nextConfig = {};
+const nextConfig = {
+        // images: {
+        //     loader: "custom",
+        //     formats: ["image/avif", "image/webp"],
+        // }
+};
 
 export default withNextIntl(nextConfig);
 

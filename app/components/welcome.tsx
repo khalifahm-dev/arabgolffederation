@@ -2,10 +2,12 @@ import '@/app/components/welcome.css';
 import { Col, Row } from 'antd';
 import imgMain from '@/public/welcome.webp'
 import { getMessages } from "next-intl/server";
+import Image from 'next/image'
+import AppImage from './AppImage';
 
 export default async function HomeWelcome( {locale}:{locale:string}) {
        const t: any = (await getMessages({ locale })).WelcomeHomePage;
-
+       
         return (
                 <div className='absolute'>
                          {/* <div className='h-[125px]'></div> */}
@@ -16,7 +18,7 @@ export default async function HomeWelcome( {locale}:{locale:string}) {
                                         <p className='welcomeDesc'>{t.Desc}</p>
                                 </Col>
                                 <Col xs={24} sm={24} md={24} lg={13} xl={13}  >
-                                        <img className='intoImg' src={imgMain.src} alt="" />
+                                        <AppImage  />
                                 </Col>
                         </Row>
                 </div >
