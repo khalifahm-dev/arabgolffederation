@@ -1,12 +1,15 @@
 
 import '@/app/components/welcome.css';
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
 import { Col, Row } from 'antd';
 import { getMessages } from "next-intl/server";
 
-export default async function HomeGetInTouch( {locale}:{locale:string}) {
-        const t: any = (await getMessages({ locale })).GetInTouch;
+export default async function HomeGetInTouch( {locale}:{locale:Locale}) {
+      //  const t: any = (await getMessages({ locale })).GetInTouch;
 
-
+      const dictionary = await getDictionary(locale);
+      const t = dictionary["GetInTouch"];
         return (
 
                 <div className='absolute getInTouchContainter'>

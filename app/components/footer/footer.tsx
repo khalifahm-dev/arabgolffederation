@@ -2,11 +2,15 @@
 import '@/app/components/footer/footer.css';
 import { Col, Row } from 'antd';
 import Logo from '../logo';
-import { getMessages } from "next-intl/server";
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
 
-export default async function Footer({ locale }: { locale: string }) {
+export default async function Footer({ locale }: { locale: Locale }) {
  
-  const t: any = (await getMessages({ locale })).Footer;
+  //const t: any = (await getMessages({ locale })).Footer;
+
+  const dictionary = await getDictionary(locale);
+        const t = dictionary["Footer"];
 
   return (
     <footer className='footerContainer z-50'>
@@ -39,7 +43,7 @@ export default async function Footer({ locale }: { locale: string }) {
         <img className='golfLogoFooter' src="/Golf.png" alt="" />
         </Col>
       </Row>
-      <p className='copyright'>{t.footerCopyrights}</p>
+      <p className='copyright'>{t.Copyrights}</p>
     </footer >
   );
 }

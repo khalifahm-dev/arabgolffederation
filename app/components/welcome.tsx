@@ -4,9 +4,15 @@ import imgMain from '@/public/welcome.webp'
 import { getMessages } from "next-intl/server";
 import Image from 'next/image'
 import AppImage from './AppImage';
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
 
-export default async function HomeWelcome( {locale}:{locale:string}) {
-       const t: any = (await getMessages({ locale })).WelcomeHomePage;
+export default async function HomeWelcome( {locale}:{locale:Locale}) {
+
+        const dictionary = await getDictionary(locale);
+        const t = dictionary["WelcomeHomePage"];
+
+      // const t: any = (await getMessages({ locale })).WelcomeHomePage;
        
         return (
                 <div className='absolute'>

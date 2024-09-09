@@ -5,9 +5,10 @@ import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 //import { getAllCategories } from "@/lib/api";
 import Link from 'next/link';
+import { i18n, type Locale } from "../../i18n-config";
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+//import { getMessages } from "next-intl/server";
 
 export const metadata = {
   title: `Next.js and ${CMS_NAME} Example`,
@@ -22,15 +23,19 @@ const inter = Inter({
 
 
 type LayoutProps = {
-  params: { locale: string };
+  params: { locale: Locale };
   children: React.ReactNode;
 };
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
 export default async function RootLayout({
   params, children }: LayoutProps) {
 
   const { locale } = params;
-  const messages = await getMessages();
+  //const messages = await getMessages();
 
 
   const dir = locale == 'ar' ? 'rtl' : 'ltr';
@@ -54,13 +59,13 @@ export default async function RootLayout({
           </defs>
         </svg>
         <section className="bg">
-          <NextIntlClientProvider messages={messages}>
+          {/* <NextIntlClientProvider messages={messages}> */}
             <div>
               <Header locale={locale} />
               <main>{children}</main>
-              <Footer locale={locale} />
+              <Footer locale={locale} /> 
             </div>
-          </NextIntlClientProvider>
+          {/* </NextIntlClientProvider> */}
         </section>
 
       </body>

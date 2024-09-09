@@ -6,29 +6,33 @@ import styles from '@/app/components/header/header.module.css';
 import '@/app/components/header/header.css';
 import Logo from '../logo';
 import logoImg from '@/public/Golf.png'
-import { useTranslations } from "next-intl";
+import { getDictionary } from "@/get-dictionary";
+import { Locale } from "@/i18n-config";
 
 type HeaderContainerProps = {
   locale: string;
   children: React.ReactNode;
 };
 
-async function HeaderContainer({ locale,onClick ,menuIconToggle,style,current}: {locale:string , onClick:MenuProps['onClick'], menuIconToggle:() => void, style: {
+async function HeaderContainer({ locale,onClick ,menuIconToggle,style,current}: {locale:Locale , onClick:MenuProps['onClick'], menuIconToggle:() => void, style: {
   visibility: string;
 },current:string}) {
 
-  const t = useTranslations("Header");
+
+  const dictionary = await getDictionary(locale);
+
+  const t = dictionary["Header"];
 
 
 
   var menuItems: any[];
   menuItems = [];
-  menuItems.push({ 'label': t("home"), 'key': 'Home' });
-  menuItems.push({ 'label': t("about"), 'key': 'AboutUs' });
-  menuItems.push({ 'label': t("boardOfDirectors"), 'key': 'BoardofDirectors' });
-  menuItems.push({ 'label': t("tournaments"), 'key': 'Tournaments' });
-  menuItems.push({ 'label': t("news"), 'key': 'News' });
-  menuItems.push({ 'label': t("contact"), 'key': 'ContactUs' });
+  menuItems.push({ 'label': t.home, 'key': 'Home' });
+  menuItems.push({ 'label': t.about, 'key': 'AboutUs' });
+  menuItems.push({ 'label': t.boardOfDirectors, 'key': 'BoardofDirectors' });
+  menuItems.push({ 'label': t.tournaments, 'key': 'Tournaments' });
+  menuItems.push({ 'label': t.news, 'key': 'News' });
+  menuItems.push({ 'label': t.contact, 'key': 'ContactUs' });
 
   
   return (
@@ -40,7 +44,7 @@ async function HeaderContainer({ locale,onClick ,menuIconToggle,style,current}: 
         <div className='flex'>
           <div className='row m-auto items-center justify-center'>
             <span className='partText'>
-              {t("partnership")}
+              {t.partnership}
             </span>
             <img className='golfLogo' src={logoImg.src} alt="" />
           </div>

@@ -1,9 +1,12 @@
 import '@/app/components/welcome.css';
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
 import { Col, Row } from 'antd';
-import { getMessages } from "next-intl/server";
 
-export default async function HomeHowAFGHelp({ locale }: { locale: string }) {
-        const t: any = (await getMessages({ locale })).HowHelpHomePage;
+export default async function HomeHowAFGHelp({ locale }: { locale: Locale }) {
+       // const t: any = (await getMessages({ locale })).HowHelpHomePage;
+       const dictionary = await getDictionary(locale);
+       const t = dictionary["HowHelpHomePage"];
         return (
                 <div className="HomeHowAFGHelp">
                         <div className='w-full m-auto pd-h-115'>
