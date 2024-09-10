@@ -11,7 +11,7 @@ export default async function HomeWelcome( {locale}:{locale:string}) {
         return (
                 <div className='absolute'>
                          {/* <div className='h-[125px]'></div> */}
-                        <Row className='pd-h-115 pt-6' gutter={[16, 48]}>
+                        <Row className='pd-h-115 pt-6'>
                                 <Col className='relative' xs={24} sm={24} md={24} lg={11} xl={11} >
                                          <h1>{t.Title}</h1>
                                         <span className='welcome'>{t.SubTitle}</span>

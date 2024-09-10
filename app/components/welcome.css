@@ -24,9 +24,10 @@ h1 {
 }
 
 .intoImg{
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     object-fit: cover;
+    margin-left: 50px;
 
 }
 .homeAboutContainer {

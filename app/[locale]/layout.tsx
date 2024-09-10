@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { RootStyleRegistry } from "../components/root-style-registry";
 
 export const metadata = {
   title: `Next.js and ${CMS_NAME} Example`,
@@ -56,9 +57,11 @@ export default async function RootLayout({
         <section className="bg">
           <NextIntlClientProvider messages={messages}>
             <div>
-              <Header locale={locale} />
-              <main>{children}</main>
-              <Footer locale={locale} />
+              <RootStyleRegistry>
+                <Header locale={locale} />
+                <main>{children}</main>
+                <Footer locale={locale} />
+              </RootStyleRegistry>
             </div>
           </NextIntlClientProvider>
         </section>

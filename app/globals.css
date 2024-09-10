@@ -12,11 +12,15 @@ body {
 }
 
 ul {
-
+    background: transparent !important;
     border-bottom: 0 solid transparent !important;
     justify-content: end;
 }
 
+
+.footerCols li > a {
+    color: white !important;
+}
 
 li>span,
 .ant-menu-title-content {
