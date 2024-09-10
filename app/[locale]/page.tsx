@@ -8,12 +8,17 @@ import HomeWelcome from "../components/welcome";
 import HomeAbout from "../components/HomeAbout";
 import HomeHowAFGHelp from "../components/HomeHowAFGHelp";
 import HomeGetInTouch from "../components/HomeGetInTouch";
+import { Locale } from "@/i18n-config";
 
 
 
-export default async function Page({ locale }: { locale: string }) {
+export default async function Page({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}) {
 
-
+ 
 
 
   const { isEnabled } = draftMode();

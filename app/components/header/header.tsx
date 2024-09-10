@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import type { MenuProps, TabsProps } from 'antd';
 import HeaderContainer from "./HeaderContainer";
+import { Locale } from '@/i18n-config';
 
 
-export default function Header({ locale }: { locale: string }) {
+export default function Header({ locale }: { locale: Locale }) {
     const [current, setCurrent] = useState('mail');
     const [menu, setMenu] = useState({ isHidden: true });
 
