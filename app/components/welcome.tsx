@@ -15,7 +15,7 @@ export default async function HomeWelcome( {locale}:{locale:Locale}) {
       // const t: any = (await getMessages({ locale })).WelcomeHomePage;
        
         return (
-                <div className='absolute'>
+                <div>
                          {/* <div className='h-[125px]'></div> */}
                         <Row className='pd-h-115 pt-6'>
                                 <Col className='relative' xs={24} sm={24} md={24} lg={11} xl={11} >

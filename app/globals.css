@@ -79,7 +79,7 @@ li:hover::after,
     padding-bottom: 32px;
 }
 .h-220{
-    height:280px;
+    height:130px;
 }
 
 .h-120{
@@ -95,7 +95,7 @@ li:hover::after,
     background-image: url('../public/background.svg');
     background-size: cover;
     width: 100%;
-    height: 820px;
+    height: 920px;
 }
 
 

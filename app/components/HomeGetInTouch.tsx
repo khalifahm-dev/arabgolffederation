@@ -12,7 +12,7 @@ export default async function HomeGetInTouch( {locale}:{locale:Locale}) {
       const t = dictionary["GetInTouch"];
         return (
 
-                <div className='absolute getInTouchContainter'>
+                <div className='getInTouchContainter'>
                         <div className='getInTouchSubContainter'>
                                 <Row className='' gutter={[36, 0]}>
 

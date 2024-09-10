@@ -9,6 +9,7 @@ import HomeAbout from "../components/HomeAbout";
 import HomeHowAFGHelp from "../components/HomeHowAFGHelp";
 import HomeGetInTouch from "../components/HomeGetInTouch";
 import { Locale } from "@/i18n-config";
+import '@/app/components/welcome.css';
 
 
 
@@ -18,7 +19,7 @@ export default async function Page({
   params: { locale: Locale };
 }) {
 
- 
+
 
 
   const { isEnabled } = draftMode();
@@ -28,11 +29,15 @@ export default async function Page({
   // const morePosts = allPosts.slice(1);
 
   return (
-    <div className="relative h-2500">
-      <HomeWelcome    locale={locale} />
-      <HomeAbout      locale={locale} />
-      <HomeHowAFGHelp locale={locale} />
-      <HomeGetInTouch locale={locale} />
+    <div>
+
+      <div className="col homeContainer">
+        <HomeWelcome locale={locale} />
+        <HomeAbout locale={locale} />
+        <HomeHowAFGHelp locale={locale} />
+        <HomeGetInTouch locale={locale} />
+      </div>
+
     </div>
   );
 }
